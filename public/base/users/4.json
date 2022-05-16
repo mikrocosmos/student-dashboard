@@ -1,0 +1,9 @@
+[
+  {
+    "id": 4,
+    "name": "Jarvis",
+    "fullName": "Jarvis Ipsum",
+    "status": "Student",
+    "img": "/img/jarvis.png"
+  }
+]

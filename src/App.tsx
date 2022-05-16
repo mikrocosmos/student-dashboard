@@ -1,25 +1,60 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import axios from "axios";
 
-function App() {
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Dashboard from "./pages/Dashboard";
+
+function App(): JSX.Element {
+  const [activeUser, setActiveUser] = useState<UserList[]>([]);
+  const fetchActiveUser = async () => {
+    await axios
+      .get("/base/users/1.json")
+      .then((res) => setActiveUser(res.data));
+  };
+
+  React.useEffect(() => {
+    try {
+      fetchActiveUser();
+    } catch (error) {
+      alert("Error: cannot render users list");
+    }
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="container xl h-full font-sans">
+        <Sidebar />
+        {activeUser.map((e: UserList) => (
+          <Header
+            key={e.id}
+            id={e.id}
+            name={e.name}
+            fullName={e.fullName}
+            status={e.status}
+            img={e.img}
+            activeUser={activeUser}
+          />
+        ))}
+        <Routes>
+					{activeUser.map((e: UserList) => (
+          <Route path="/"
+					element={
+					<Dashboard
+            key={e.id}
+            id={e.id}
+            name={e.name}
+            fullName={e.fullName}
+            status={e.status}
+            img={e.img}
+            activeUser={activeUser}
+						/>
+					}
+          />
+        ))}
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

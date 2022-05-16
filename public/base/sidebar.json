@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Dashboard",
+    "icon": "/img/icons/sidebar/dashboard.svg",
+    "activeIcon": "/img/icons/sidebar/white/dashboard.svg"
+  },
+  {
+    "title": "Courses",
+    "icon": "/img/icons/sidebar/courses.svg",
+    "activeIcon": "/img/icons/sidebar/white/courses.svg"
+  },
+  {
+    "title": "Materials",
+    "icon": "/img/icons/sidebar/materials.svg",
+    "activeIcon": "/img/icons/sidebar/white/materials.svg"
+  },
+  {
+    "title": "Calendar",
+    "icon": "/img/icons/sidebar/calendar.svg",
+    "activeIcon": "/img/icons/sidebar/white/calendar.svg"
+  },
+  {
+    "title": "Transcripts",
+    "icon": "/img/icons/sidebar/transcripts.svg",
+    "activeIcon": "/img/icons/sidebar/white/transcripts.svg"
+  },
+  {
+    "title": "Grades",
+    "icon": "/img/icons/sidebar/grades.svg",
+    "activeIcon": "/img/icons/sidebar/white/grades.svg"
+  },
+  {
+    "title": "Attendance",
+    "icon": "/img/icons/sidebar/attendance.svg",
+    "activeIcon": "/img/icons/sidebar/white/attendance.svg"
+  },
+  {
+    "title": "Settings",
+    "icon": "/img/icons/sidebar/settings.svg",
+    "activeIcon": "/img/icons/sidebar/white/settings.svg"
+  }
+]
