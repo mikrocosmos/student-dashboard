@@ -1,7 +1,7 @@
 import UserNav from "./UserNav";
 
 interface HeaderProps extends UserList {
-	activeUser: Array<UserList>;
+  activeUser: Array<UserList>;
 }
 
 function Header({ activeUser }: HeaderProps): JSX.Element {

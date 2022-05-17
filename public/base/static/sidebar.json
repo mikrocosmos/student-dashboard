@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Dashboard",
+    "icon": "/img/icons/sidebar/dashboard.svg",
+    "activeIcon": "/img/icons/sidebar/white/dashboard.svg",
+		"isActive": true,
+		"destination": "/"
+  },
+  {
+    "title": "Courses",
+    "icon": "/img/icons/sidebar/courses.svg",
+    "activeIcon": "/img/icons/sidebar/white/courses.svg",
+		"isActive": false,
+		"destination": "/courses"
+  },
+  {
+    "title": "Materials",
+    "icon": "/img/icons/sidebar/materials.svg",
+    "activeIcon": "/img/icons/sidebar/white/materials.svg",
+		"isActive": false,
+		"destination": "/materials"
+  },
+  {
+    "title": "Calendar",
+    "icon": "/img/icons/sidebar/calendar.svg",
+    "activeIcon": "/img/icons/sidebar/white/calendar.svg",
+		"isActive": false,
+		"destination": "/calendar"
+  },
+  {
+    "title": "Transcripts",
+    "icon": "/img/icons/sidebar/transcripts.svg",
+    "activeIcon": "/img/icons/sidebar/white/transcripts.svg",
+		"isActive": false,
+		"destination": "/transcripts"
+  },
+  {
+    "title": "Grades",
+    "icon": "/img/icons/sidebar/grades.svg",
+    "activeIcon": "/img/icons/sidebar/white/grades.svg",
+		"isActive": false,
+		"destination": "/grades"
+  },
+  {
+    "title": "Attendance",
+    "icon": "/img/icons/sidebar/attendance.svg",
+    "activeIcon": "/img/icons/sidebar/white/attendance.svg",
+		"isActive": false,
+		"destination": "/attendance"
+  },
+  {
+    "title": "Settings",
+    "icon": "/img/icons/sidebar/settings.svg",
+    "activeIcon": "/img/icons/sidebar/white/settings.svg",
+		"isActive": false,
+		"destination": "/settings"
+  }
+]

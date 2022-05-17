@@ -23,7 +23,7 @@ function App(): JSX.Element {
   }, []);
   return (
     <BrowserRouter>
-      <div className="container xl h-full font-sans">
+      <div className="container xl h-full font-sans overflow-hidden">
         <Sidebar />
         {activeUser.map((e: UserList) => (
           <Header

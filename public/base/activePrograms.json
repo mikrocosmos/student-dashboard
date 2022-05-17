@@ -1,0 +1,20 @@
+[
+	{
+		"title": "Master of Computer Science",
+		"university": "University of Upstate at Brookstone",
+		"universityImage": "/img/Brookstone.png",
+		"overdueAssignments": 1,
+		"remainingAbsenses": 5,
+		"academicAverage": "A-",
+		"completion": 45
+	},
+	{
+		"title": "Certificate UX/UI design",
+		"university": "Academy of Art and Technology at Dursburg",
+		"universityImage": "/img/Dursburg.png",
+		"overdueAssignments": 0,
+		"remainingAbsenses": 6,
+		"academicAverage": null,
+		"completion": 28
+	}
+]

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import NavLink from "./NavLink";
+import {Link} from 'react-router-dom'
 
 function Sidebar(): JSX.Element {
   const [navList, setNavList] = useState<ElementList[]>([]);
   const fetchNavList = async () => {
-    await axios.get("/base/sidebar.json").then((res) => setNavList(res.data));
+    await axios.get("/base/static/sidebar.json").then((res) => setNavList(res.data));
   };
 
   React.useEffect(() => {
@@ -21,18 +22,20 @@ function Sidebar(): JSX.Element {
       <button className="absolute right-2 top-4 z-5 opacity-50 hover:opacity-100 transition linear delay-2500">
         <img src="/img/icons/left-arrow.svg" alt="" width={28} height={28} />
       </button>
-      <div className="block m-10">
-        <img
-          className="cursor-pointer inline-block mr-3 -mt-0.5"
-          width={28}
-          height={36}
-          src="/img/svg/_logo.svg"
-          alt="Univé"
-        />
-        <span className="font-Museo font-semibold text-3xl bg-clip-text bg-gradient-to-br from-white/70 to-gray-200/70 [-webkit-text-fill-color:transparent]">
-          Univé
-        </span>
-      </div>
+      <Link to="/">
+				<div className="block m-10">
+					<img
+						className="cursor-pointer inline-block mr-3 -mt-0.5"
+						width={28}
+						height={36}
+						src="/img/svg/_logo.svg"
+						alt="Univé"
+					/>
+					<span className="font-Museo font-semibold text-3xl bg-clip-text bg-gradient-to-br from-white/70 to-gray-200/70 [-webkit-text-fill-color:transparent]">
+						Univé
+					</span>
+				</div>
+			</Link>
       <ul className="mt-14">
         {navList.map((e) => (
           <NavLink
@@ -40,6 +43,8 @@ function Sidebar(): JSX.Element {
             title={e.title}
             icon={e.icon}
             activeIcon={e.activeIcon}
+						isActive={e.isActive}
+						destination={e.destination}
           />
         ))}
       </ul>
