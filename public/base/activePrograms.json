@@ -14,7 +14,7 @@
 		"universityImage": "/img/Dursburg.png",
 		"overdueAssignments": 0,
 		"remainingAbsenses": 6,
-		"academicAverage": null,
+		"academicAverage": "",
 		"completion": 28
 	}
 ]

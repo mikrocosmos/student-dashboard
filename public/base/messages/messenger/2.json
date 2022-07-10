@@ -1,0 +1,16 @@
+[
+  {
+    "author": 1,
+    "date": "2022-05-20T7:24:22:11Z",
+    "type": "text",
+    "content": "Hi, Chris.",
+    "isReaded": true
+  },
+	{
+    "author": 2,
+    "date": "2022-05-20T7:25:22:11Z",
+    "type": "text",
+    "content": "OK. I’ll have her give you a call and you can figure what to do next.",
+    "isReaded": true
+  }
+]

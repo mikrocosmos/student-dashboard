@@ -1,20 +1,44 @@
-import ActivePrograms from "./modules/ActivePrograms";
+import React, { useState } from "react";
+import axios from "axios";
+
+import ActivePrograms from "../modules/ActivePrograms";
+import Card from "../modules/Card";
+import UpcommingSessions from '../modules/UpcommingSessions'
 interface DashboardProps extends UserList {
   activeUser: Array<UserList>;
 }
-function Dashboard({
-  id,
-  name,
-  fullName,
-  status,
-  img,
-  activeUser,
-}: DashboardProps) {
+function Dashboard({ name }: DashboardProps) {
+  const [card, setCard] = useState<Card[]>([]);
+  const fetchCard = async () => {
+    await axios.get("/base/card.json").then((res) => setCard(res.data));
+  };
+
+  React.useEffect(() => {
+    try {
+      fetchCard();
+    } catch (error) {
+      alert("Error: cannot render cards");
+    }
+  }, []);
   return (
-    <main className="bg-[#F0EFF5] relative top-20 left-60 h-full p-12">
+    <>
       <h1 className="text-[21px] text-[#333269] font-bold ">Hello, {name}!</h1>
       <ActivePrograms />
-    </main>
+      <div className="flex">
+        {card.map((e: Card) => (
+          <Card
+            title={e.title}
+            theme={e.theme}
+            checkedIn={e.checkedIn}
+            img={e.img}
+            day={e.day}
+            month={e.month}
+            state={e.state}
+          />
+        ))}
+				<UpcommingSessions />
+      </div>
+    </>
   );
 }
 

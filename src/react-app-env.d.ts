@@ -22,6 +22,24 @@ interface ActivePrograms {
   universityImage: string;
   overdueAssignments: number;
   remainingAbsenses: number;
-  academicAverage: string | null;
+  academicAverage: string;
   completion: number;
+}
+
+interface Card {
+  title: string;
+  theme: string;
+  checkedIn: boolean;
+  img: string;
+  day: number;
+  month: string;
+  state: string;
+}
+
+interface Session {
+  day: number;
+  month: string;
+  title: string;
+  theme: string;
+  time: string;
 }

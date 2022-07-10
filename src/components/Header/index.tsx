@@ -6,7 +6,7 @@ interface HeaderProps extends UserList {
 
 function Header({ activeUser }: HeaderProps): JSX.Element {
   return (
-    <header className="w-full h-20 fixed left-60 top-0 bg-white py-5 px-10">
+    <header className="w-full h-20 fixed z-20 left-60 top-0 bg-white py-5 px-10">
       <div className="flex">
         <img
           className="flex-initial"

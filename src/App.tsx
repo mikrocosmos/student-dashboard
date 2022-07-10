@@ -5,6 +5,7 @@ import axios from "axios";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
+import Messages from "./pages/modules/Messages";
 
 function App(): JSX.Element {
   const [activeUser, setActiveUser] = useState<UserList[]>([]);
@@ -23,7 +24,7 @@ function App(): JSX.Element {
   }, []);
   return (
     <BrowserRouter>
-      <div className="container xl h-full font-sans overflow-hidden">
+      <div className="container xl h-full font-sans bg-[#F0EFF5]">
         <Sidebar />
         {activeUser.map((e: UserList) => (
           <Header
@@ -36,23 +37,39 @@ function App(): JSX.Element {
             activeUser={activeUser}
           />
         ))}
-        <Routes>
-					{activeUser.map((e: UserList) => (
-          <Route path="/"
-					element={
-					<Dashboard
-            key={e.id}
-            id={e.id}
-            name={e.name}
-            fullName={e.fullName}
-            status={e.status}
-            img={e.img}
-            activeUser={activeUser}
-						/>
+        <main className="relative top-20 left-60 w-max h-full p-12">
+          <Routes>
+            {activeUser.map((e: UserList) => (
+              <Route
+                path="/"
+                element={
+                  <Dashboard
+                    key={e.id}
+                    id={e.id}
+                    name={e.name}
+                    fullName={e.fullName}
+                    status={e.status}
+                    img={e.img}
+                    activeUser={activeUser}
+                  />
+                }
+              />
+            ))}
+          </Routes>
+					{
+						activeUser.map((e: UserList) => (
+              <Messages 
+							key={e.id}
+							id={e.id}
+							name={e.name}
+							fullName={e.fullName}
+							status={e.status}
+							img={e.img}
+							activeUser={activeUser}
+							/>
+            ))
 					}
-          />
-        ))}
-        </Routes>
+        </main>
       </div>
     </BrowserRouter>
   );

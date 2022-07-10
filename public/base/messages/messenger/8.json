@@ -1,0 +1,23 @@
+[
+	{
+		"author": 8,
+		"date": "2022-05-21T19:53:43:11Z",
+		"type": "text",
+		"content": "Hello, Mia. Can you send me your presentation?",
+		"isReaded": true
+	},
+	{
+		"author": 1,
+		"date": "2022-05-21T20:01:22:11Z",
+		"type": "file",
+		"content": "presentation_mia_v.pptx",
+		"isReaded": true
+	},
+	{
+		"author": 8,
+		"date": "2022-05-21T23:22:22:11Z",
+		"type": "text",
+		"content": "Thanks, Mia. Please let me know when I can hand off these files for John.",
+		"isReaded": false
+	}
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "author": 11,
+    "date": "2022-05-10T7:25:22:11Z",
+    "type": "text",
+    "content": "Hi, Mia",
+    "isReaded": false
+  },
+  {
+    "author": 11,
+    "date": "2022-05-10T7:26:22:11Z",
+    "type": "text",
+    "content": "Any chance we can do it later this week? I’m out of town camping.",
+    "isReaded": false
+  }
+]

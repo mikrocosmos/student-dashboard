@@ -20,7 +20,7 @@ function NavLink({
       <li className="h-[34px] my-4 px-10 flex cursor-pointer">
         {isActive ? (
           <>
-            <div className="w-[5px] h-[34px] bg-[#EE3637] absolute left-0"></div>
+            <div className="w-[5px] h-[34px] rounded bg-[#EE3637] absolute left-0"></div>
             <img
               className="mr-3.5 -mt-1"
               src={activeIcon}

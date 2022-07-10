@@ -1,0 +1,16 @@
+[
+	{
+		"author": 1,
+		"date": "2022-02-21T23:20:22:11Z",
+		"type": "image",
+		"content": "https://habrastorage.org/webt/y4/tc/i7/y4tci7evnak6quqqgjfp1ngdg9m.png",
+		"isReaded": true
+	},
+	{
+		"author": 5,
+		"date": "2022-02-21T23:22:22:11Z",
+		"type": "text",
+		"content": "Sure, no problem. I’ll send it over once we complete full code review.",
+		"isReaded": true
+	}
+]
